@@ -3,21 +3,26 @@ package org.neha.basic_programs;
 public class Fibonacci {
 
     public static void main(String[] args) {
-        long[] result= printFibb(10);
-        System.out.println(result);
-    }
-    public static long[] printFibb(int n)
-    {
 
-        int a=0,b=1;
-               long sum;
+        int n=10;
+        int a=1;
+        int b=1;
 
-        for(int i =0; i<n-2;i++){
-            sum = a+b;
-            System.out.println(sum);
+        int sum=0;
+        if(n==1){
+            System.out.println(a);
+            return;
+        }
+        System.out.print(a+" "+b);
+
+        for(int i=0; i<n-2;i++){
+
+            sum=a+b;
+            System.out.print(" "+sum);
             a=b;
             b=sum;
         }
-        return sum;
+
     }
+
 }
